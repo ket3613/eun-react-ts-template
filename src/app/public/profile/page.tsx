@@ -1,0 +1,1 @@
+export default function Page() { return <h1 className="text-xl font-bold">프로필(공개)</h1>; }

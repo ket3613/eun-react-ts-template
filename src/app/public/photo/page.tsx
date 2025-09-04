@@ -1,0 +1,1 @@
+export default function Page() { return <h1 className="text-xl font-bold">사진(공개)</h1>; }

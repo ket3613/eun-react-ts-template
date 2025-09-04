@@ -1,9 +1,3 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
 ```bash
 npm run dev
 # or
@@ -14,23 +8,34 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+project-root/
+├─ src/ # 소스코드 루트
+│ ├─ app/ # App Router (페이지, 레이아웃, 서버컴포넌트)
+│ │ ├─ layout.tsx # 공통 레이아웃
+│ │ ├─ page.tsx # 홈 페이지 (/)
+│ │ ├─ not-found.tsx # 404 페이지
+│ │ ├─ about/page.tsx # 예시: /about
+│ │ └─ projects/page.tsx # 예시: /projects
+│ │
+│ ├─ components/ # 재사용 컴포넌트 모음
+│ │ ├─ ui/ # 버튼, 카드, 인풋 등 작은 단위
+│ │ └─ layout/ # 헤더, 푸터 등 레이아웃 단위
+│ │
+│ ├─ lib/ # 유틸리티 함수, 헬퍼, API 클라이언트
+│ │ ├─ api.ts # fetch wrapper
+│ │ └─ auth.ts # 인증 관련 함수
+│ │
+│ ├─ providers/ # Context Provider (AuthProvider 등)
+│ ├─ hooks/ # 커스텀 훅
+│ ├─ styles/ # 글로벌/모듈 CSS (globals.css 포함)
+│ └─ types/ # 타입 정의 (DTO, ContextType 등)
+│
+├─ public/ # 정적 리소스 (이미지, 폰트 등)
+│ └─ favicon.ico
+│
+├─ .gitignore
+├─ next.config.mjs
+├─ package.json
+├─ tailwind.config.ts # Tailwind 설정
+├─ tsconfig.json
+└─ README.md
